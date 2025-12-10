@@ -20,8 +20,8 @@ export function Navbar() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "The Menu", href: "/menu" },
-    { name: "Private Events", href: "/events" },
-    { name: "Contact", href: "/contact" },
+    // { name: "Private Events", href: "/events" },
+    // { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -37,7 +37,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/">
           <a className="group relative z-50">
-            <span className="block text-xs tracking-[0.4em] text-primary/80 mb-1 ml-1">EST. 2024</span>
+            <span className="block text-xs tracking-[0.4em] text-primary/80 mb-1 ml-1">EST. 2025</span>
             <span className="text-3xl font-serif font-medium tracking-wide text-foreground">
               DREAM <span className="italic font-light text-primary">BILLIARDS</span>
             </span>
@@ -62,12 +62,12 @@ export function Navbar() {
               </a>
             </Link>
           ))}
-          <Button 
+          {/* <Button 
             variant="outline" 
             className="border-white/20 text-foreground hover:bg-white hover:text-black uppercase tracking-[0.2em] text-[10px] font-bold rounded-none px-8 py-5 transition-all duration-500"
           >
             Reserve Table
-          </Button>
+          </Button >  */}
         </div>
 
         {/* Mobile Toggle */}

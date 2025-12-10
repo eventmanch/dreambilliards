@@ -45,7 +45,7 @@ export default function Home() {
             </div>
             
             <h2 className="text-primary/80 text-xs uppercase tracking-[0.5em] mb-8 font-medium">
-              The Private Collection
+              Escape the ordinary
             </h2>
             
             <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-serif font-thin text-white mb-8 tracking-tighter leading-[0.9] mix-blend-difference">
@@ -53,8 +53,8 @@ export default function Home() {
             </h1>
             
             <p className="text-lg md:text-xl text-gray-400 max-w-md mx-auto mb-16 font-light leading-relaxed tracking-wide">
-              An immersive noir sanctuary. <br/>
-              Precision. Privacy. Prestige.
+              Where shadows play and legends break. <br/>
+              Unwind. Compete. Celebrate.
             </p>
             
             <div className="flex flex-col items-center gap-6">
@@ -105,13 +105,13 @@ export default function Home() {
                 
                 <div className="pt-12 flex gap-12">
                   <div>
-                    <div className="text-4xl font-serif text-white mb-2">12</div>
+                    <div className="text-4xl font-serif text-white mb-2">13</div>
                     <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Pro Tables</div>
                   </div>
-                  <div>
+                  {/* <div>
                     <div className="text-4xl font-serif text-white mb-2">03</div>
                     <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Private Rooms</div>
-                  </div>
+                  </div> */}
                   <div>
                     <div className="text-4xl font-serif text-white mb-2">∞</div>
                     <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Possibilities</div>

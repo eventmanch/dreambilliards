@@ -20,19 +20,17 @@ export function Footer() {
           <div className="space-y-6">
             <h4 className="text-sm uppercase tracking-widest text-primary font-bold">Opening Hours</h4>
             <ul className="space-y-2 text-muted-foreground font-light">
-              <li>Mon - Thu: 4pm - 12am</li>
-              <li>Fri - Sat: 4pm - 2am</li>
-              <li>Sunday: 2pm - 11pm</li>
+              <li>Mon-Sun: 11am-2am</li>
             </ul>
           </div>
 
-          {/* Contact */}
+          
           <div className="space-y-6">
             <h4 className="text-sm uppercase tracking-widest text-primary font-bold">Contact</h4>
             <ul className="space-y-2 text-muted-foreground font-light">
-              <li>123 Velvet Lane, Metropolitan District</li>
-              <li>(555) 123-4567</li>
-              <li>reservations@dreambilliards.com</li>
+              <li>510 Bryne Dr Unit A, Barrie, ON L4N9P6, Canada</li>
+              <li>+1(705)503-3789</li>
+              <li>dreambilliards@gmail.com</li>
             </ul>
             
             <div className="flex justify-center md:justify-start gap-6 pt-4">
@@ -45,7 +43,7 @@ export function Footer() {
         </div>
 
         <div className="mt-20 pt-8 border-t border-white/5 text-center text-xs text-muted-foreground uppercase tracking-widest opacity-50">
-          © 2024 Dream Billiards. All Rights Reserved.
+          © 2025 Dream Billiards. All Rights Reserved.
         </div>
       </div>
     </footer>

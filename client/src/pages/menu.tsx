@@ -8,47 +8,96 @@ import snackImg from "@assets/generated_images/gourmet_bar_snacks_on_slate.png";
 const MENU_ITEMS = {
   cocktails: [
     {
-      name: "The Black 8",
-      description: "Premium vodka, coffee liqueur, fresh espresso, vanilla bean.",
-      price: "18",
-    },
-    {
-      name: "Golden Break",
-      description: "Aged bourbon, honey syrup, angostura bitters, gold leaf.",
-      price: "22",
-    },
-    {
-      name: "Velvet Rail",
-      description: "Gin, lavender infusion, lemon, egg white, crème de violette.",
-      price: "19",
-    },
-    {
-      name: "Side Pocket",
-      description: "Mezcal, agave, lime, jalapeño slice, smoked salt rim.",
-      price: "20",
-    },
+    name: "Mozzarella Sticks (6 pcs)",
+    description: "Golden-fried cheese sticks served with zesty marinara for the ultimate cheesy crunch",
+    price: "9.99",
+  },
+  {
+    name: "Chicken Tenders (5pcs)",
+    description: "Served with fries.",
+    price: "14.99",
+  },
+  {
+    name: "Famous Samosa Poutine",
+    description: "Canadian twist where golden samosas meet rich poutine flavors in a fusion you'll crave again.",
+    price: "11.99",
+  },
+  {
+    name: "Onion Rings",
+    description: "Crispy battered onion rings served golden and crunchy along with choice of dip.",
+    price: "8.99",
+  },
+  {
+    name: "Cue Stick Fries",
+    description: "Your game-time crunch—perfectly seasoned Cue-Stick Fries.",
+    price: "7.99",
+  },
+  {
+    name: "Waffle Fries",
+    description: "Stack 'em, dip 'em, love 'em—our Waffle Fries never miss.",
+    price: "8.99",
+  },
+  {
+    name: "Dream Nachos",
+    description: "A bold platter of fully loaded nachos stacked with melted cheese, seasoned Vegetables, salsa, and sour cream. Great for sharing.",
+    price: "15.99",
+  },
+  {
+    name: "Wings",
+    description: "Crispy, succulent wings tossed in your choice of signature sauces. Perfectly golden on the outside and juicy on the inside.",
+    price: "15.99",
+  }
   ],
   food: [
     {
-      name: "Truffle Sliders",
-      description: "Wagyu beef, truffle aioli, brioche bun, aged cheddar.",
-      price: "24",
-    },
-    {
-      name: "Artisan Charcuterie",
-      description: "Selection of cured meats, imported cheeses, honeycomb, crackers.",
-      price: "32",
-    },
-    {
-      name: "Crispy Calamari",
-      description: "Saffron aioli, lemon zest, parsley.",
-      price: "18",
-    },
-    {
-      name: "Steak Tartare",
-      description: "Hand-cut filet mignon, capers, quail egg, crostini.",
-      price: "26",
-    },
+    name: "Dream Classic 8 OZ Burger",
+    description: "A handcrafted burger featuring a juicy beef patty on a toasted brioche bun, topped with fresh lettuce, cheese, tomato, onions, pickles with ketchup and mustard.",
+    price: "17.99",
+  },
+  {
+    name: "Ultimate Chicken Crunch",
+    description: "A Chicken patty featuring on a toasted brioche bun, topped with fresh lettuce, tomato, onions, with creamy mayo.",
+    price: "16.99",
+  },
+  {
+    name: "Plant based Burger/ wrap 6 OZ",
+    description: "Vegetarian plant based patty on burger bun or whole wheat wrap, topped with fresh lettuce, tomato, onions, and mayo and ketchup.",
+    price: "16.99",
+  },
+  {
+    name: "Poolside Tikki Burger",
+    description: "Cue up your taste buds — a crispy potato tikki layered with lettuce, tomato onions, and house sauce on a toasted bun.",
+    price: "15.99",
+  },
+
+  // Wrap & More
+  {
+    name: "Chef's Beef Wrap",
+    description: "A soft tortilla wrap filled generously with ground beef, topped with fresh lettuce, tomato, onions, pickles with ketchup and mustard.",
+    price: "17.99",
+  },
+  {
+    name: "Crispy Chicken Wrap",
+    description: "A soft tortilla wrap filled generously with crispy chicken, topped with fresh lettuce, tomato, onions with creamy mayo.",
+    price: "16.99",
+  },
+  {
+    name: "Crispy Pepperoni Melt",
+    description: "A freshly baked flatbread topped with marinara sauce, melted cheese and premium pepperoni.",
+    price: "16.99",
+  },
+
+  // Dessert
+  {
+    name: "Cherry Cheesecake - 1 Slice",
+    description: "",
+    price: "7.99",
+  },
+  {
+    name: "Tiramisu - 1 Slice",
+    description: "",
+    price: "8.99",
+  }
   ],
 };
 
@@ -78,13 +127,13 @@ export default function MenuPage() {
                 value="cocktails"
                 className="px-10 py-4 text-xs uppercase tracking-[0.2em] rounded-none data-[state=active]:bg-white data-[state=active]:text-black data-[state=active]:shadow-none transition-all duration-500"
               >
-                Cocktails
+                Appetizers
               </TabsTrigger>
               <TabsTrigger 
                 value="food"
                 className="px-10 py-4 text-xs uppercase tracking-[0.2em] rounded-none data-[state=active]:bg-white data-[state=active]:text-black data-[state=active]:shadow-none transition-all duration-500"
               >
-                Provisions
+                Mains
               </TabsTrigger>
             </TabsList>
           </div>
