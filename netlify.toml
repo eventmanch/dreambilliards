@@ -1,18 +1,29 @@
 [build]
 command = "npm run build"
-functions = "netlify/functions"
 publish = "dist/public"
 
 [dev]
 command = "npm run dev"
 port = 8888
 
-[[redirects]]
-from = "/api/*"
-to = "/.netlify/functions/api:splat"
-status = 200
-
+# SPA Routing - redirect all requests to index.html for React Router to handle
 [[redirects]]
 from = "/*"
 to = "/index.html"
 status = 200
+
+# Cache static assets
+[[headers]]
+for = "/*.js"
+[headers.values]
+  Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.css"
+[headers.values]
+  Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/index.html"
+[headers.values]
+  Cache-Control = "public, max-age=0, must-revalidate"
