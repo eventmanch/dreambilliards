@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Clock, Star } from "lucide-react";
 import heroBg from "@assets/generated_images/cinematic_billiards_table_close-up.png";
-import loungeBg from "@assets/generated_images/luxury_billiards_lounge_interior.png";
+import loungeBg from "@assets/generated_images/DSC05546.png";
 import { Link } from "wouter";
 
 export default function Home() {

@@ -1,4 +1,6 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import { FaInstagram, FaTiktok } from "react-icons/fa6";
+
 
 export function Footer() {
   return (
@@ -34,9 +36,20 @@ export function Footer() {
             </ul>
             
             <div className="flex justify-center md:justify-start gap-6 pt-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Twitter size={20} /></a>
+              <a
+              href="https://www.instagram.com/dream_billiards_barrie?igsh=MW5rbjdzcHlkMHNubw=="
+        className="text-muted-foreground hover:text-pink-600 transition-colors"
+        aria-label="Instagram"
+      >
+        <FaInstagram />
+      </a>
+      <a
+        href="https://www.tiktok.com/@yourprofile"
+        className="text-muted-foreground hover:text-gray-700 dark:text-white dark:hover:text-gray-300 transition-colors"
+        aria-label="TikTok"
+      >
+        <FaTiktok />
+      </a>
             </div>
           </div>
 

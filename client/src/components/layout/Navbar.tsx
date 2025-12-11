@@ -38,7 +38,7 @@ export function Navbar() {
         <Link href="/">
           <a className="group relative z-50">
             <span className="block text-xs tracking-[0.4em] text-primary/80 mb-1 ml-1">EST. 2025</span>
-            <span className="text-3xl font-serif font-medium tracking-wide text-foreground">
+            <span className="text-3xl font-serif font-medium tracking-wide text-foreground mt-1">
               DREAM <span className="italic font-light text-primary">BILLIARDS</span>
             </span>
           </a>
