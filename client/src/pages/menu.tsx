@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import cocktailImg from "@assets/generated_images/luxury_cocktail_in_crystal_glass.png";
 import snackImg from "@assets/generated_images/gourmet_bar_snacks_on_slate.png";
 import appetizer from "@assets/generated_images/appetizers2.jpg";
+import cocktails from "@assets/generated_images/cocktails.jpg";
 
 const MENU_ITEMS = {
   cocktails: [
@@ -121,7 +122,98 @@ const MENU_ITEMS = {
     description: "Grenadine, orange juice, and ginger ale",
     price: "7.99",
   },
+  {
+      "name": "Piña Colada",
+      "description": "Coconut cream & Pineapple Juice",
+      "price": "8.99"
+    },
 ],
+hardrinks: [
+    {
+      "name": "Caesar / Bloody Mary",
+      "description": "Vodka, Lime Juice, Tabasco, Worcestershire & Clamato",
+      "price": "13.99",
+      "size": "1.5 OZ"
+    },
+    {
+      "name": "Cosmopolitan",
+      "description": "Vodka, Orange Liqueur & Cranberry Juice",
+      "price": "13.99",
+      "size": "1.5 OZ"
+    },
+    {
+      "name": "Dream G&T",
+      "description": "A twist to Classic Gin & Tonic",
+      "price": "13.99",
+      "size": "1.5 OZ"
+    },
+    {
+      "name": "Screwdriver",
+      "description": "Vodka, Lime, Cointreau & Orange Juice",
+      "price": "13.99",
+      "size": "1.5 OZ"
+    },
+    {
+      "name": "Mojito",
+      "description": "Rum, Mint, Berry & Mango",
+      "price": "13.99",
+      "size": "1.5 OZ"
+    },
+    {
+      "name": "Margaritas",
+      "description": "Passion Fruit, Spicy Mango & Guava",
+      "price": "13.99",
+      "size": "1.5 OZ"
+    },
+    {
+      "name": "Flower Drop",
+      "description": "Elderflower, Lime & Gin",
+      "price": "13.99",
+      "size": "1.5 OZ"
+    },
+    {
+      "name": "Old Fashioned",
+      "description": "Bourbon, Simple Syrup & Bitters",
+      "price": "13.99",
+      "size": "1.5 OZ"
+    },
+    {
+      "name": "Negroni",
+      "description": "Gin, Vermouth & Campari",
+      "price": "13.99",
+      "size": "1.5 OZ"
+    },
+    {
+      "name": "Empress Walk",
+      "description": "Empress Gin, Lavender & Lime",
+      "price": "13.99",
+      "size": "1.5 OZ"
+    },
+    {
+      "name": "Lychee Martini",
+      "description": "Vodka, Lychee Liqueur & Lychee Juice",
+      "price": "13.99",
+      "size": "1.5 OZ"
+    },
+    {
+      "name": "Tequila Sunrise",
+      "description": "Tequila, Triple sec, Orange Juice & Grenadine",
+      "price": "13.99",
+      "size": "1.5 OZ"
+    },
+    {
+      "name": "Smurf",
+      "description": "Coconut Rum, Pineapple Juice & Blue Curcao",
+      "price": "13.99",
+      "size": "1.5 OZ"
+    },
+    {
+      "name": "Dream Long Island",
+      "description": "Vodka, Rum, Tequila, Gin & Triple Sec & Coke",
+      "price": "13.99",
+      "size": "2.5 OZ"
+    }
+  ],
 };
 
 export default function MenuPage() {
@@ -145,7 +237,7 @@ export default function MenuPage() {
 
         <Tabs defaultValue="cocktails" className="w-full max-w-6xl mx-auto">
           <div className="flex justify-center mb-20">
-            <TabsList className="bg-transparent border border-white/10 p-1 rounded-none h-auto inline-flex">
+            <TabsList className="bg-transparent border border-white/10 p-1 rounded-none h-auto inline-flex flex-col md:flex-row w-full md:w-auto">
               <TabsTrigger 
                 value="cocktails"
                 className="px-10 py-4 text-xs uppercase tracking-[0.2em] rounded-none data-[state=active]:bg-white data-[state=active]:text-black data-[state=active]:shadow-none transition-all duration-500"
@@ -162,7 +254,13 @@ export default function MenuPage() {
                 value="drinks"
                 className="px-10 py-4 text-xs uppercase tracking-[0.2em] rounded-none data-[state=active]:bg-white data-[state=active]:text-black data-[state=active]:shadow-none transition-all duration-500"
               >
-                Drinks
+                Mocktails
+              </TabsTrigger>
+              <TabsTrigger 
+                value="hardrinks"
+                className="px-10 py-4 text-xs uppercase tracking-[0.2em] rounded-none data-[state=active]:bg-white data-[state=active]:text-black data-[state=active]:shadow-none transition-all duration-500"
+              >
+                Cocktails
               </TabsTrigger>
             </TabsList>
           </div>
@@ -252,7 +350,7 @@ export default function MenuPage() {
                 className="relative aspect-[3/4] overflow-hidden lg:order-1 order-2"
               >
                 <img 
-                  src={cocktailImg} 
+                  src={cocktails} 
                   alt="Luxury Cocktail" 
                   className="w-full h-full object-cover opacity-80 hover:scale-105 hover:opacity-100 transition-all duration-1000"
                 />
@@ -261,6 +359,44 @@ export default function MenuPage() {
               
               <div className="space-y-16 py-8 lg:order-2 order-1">
                 {MENU_ITEMS.drinks.map((item, idx) => (
+                  <motion.div 
+                    key={item.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: idx * 0.15 }}
+                    className="group"
+                  >
+                    <div className="flex justify-between items-end mb-4 relative">
+                      <h3 className="text-3xl font-serif text-white font-light group-hover:text-primary transition-colors duration-500">{item.name}</h3>
+                      {/* Dotted Leader */}
+                      <div className="flex-grow mx-6 border-b border-dotted border-white/20 mb-2 opacity-30" />
+                      <span className="text-primary font-sans text-lg tracking-widest">${item.price}</span>
+                    </div>
+                    <p className="text-muted-foreground font-light text-sm leading-relaxed max-w-md">{item.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="hardrinks" className="mt-0 focus-visible:outline-none">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="relative aspect-[3/4] overflow-hidden lg:order-1 order-2"
+              >
+                <img 
+                  src={cocktailImg} 
+                  alt="Luxury Cocktail" 
+                  className="w-full h-full object-cover opacity-80 hover:scale-105 hover:opacity-100 transition-all duration-1000"
+                />
+                <div className="absolute inset-0 border border-white/10 pointer-events-none" />
+              </motion.div>
+              
+              <div className="space-y-16 py-8 lg:order-2 order-1">
+                {MENU_ITEMS.hardrinks.map((item, idx) => (
                   <motion.div 
                     key={item.name}
                     initial={{ opacity: 0, y: 20 }}

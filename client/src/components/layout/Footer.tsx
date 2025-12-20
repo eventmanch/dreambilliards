@@ -44,7 +44,7 @@ export function Footer() {
         <FaInstagram />
       </a>
       <a
-        href="https://www.tiktok.com/@yourprofile"
+        href="https://www.tiktok.com/@dream.billiards?_r=1&_t=ZS-91emtg0xXzL"
         className="text-muted-foreground hover:text-gray-700 dark:text-white dark:hover:text-gray-300 transition-colors"
         aria-label="TikTok"
       >

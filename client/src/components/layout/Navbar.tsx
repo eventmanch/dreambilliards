@@ -96,12 +96,12 @@ export function Navbar() {
             </Link>
           ))}
           <div className="w-12 h-[1px] bg-white/10 my-4" />
-          <Button 
+          {/* <Button 
             variant="ghost"
             className="text-primary text-sm uppercase tracking-widest hover:bg-transparent hover:text-white"
           >
             Book a Table
-          </Button>
+          </Button> */}
         </div>
       </div>
     </nav>
